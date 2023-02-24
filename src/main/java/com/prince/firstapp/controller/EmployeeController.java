@@ -20,7 +20,6 @@ public class EmployeeController {
 	public ResponseEntity<Employee> getEmployee(@PathVariable("employeeId") Long employeeId) {
 		Employee employee = employeeService.getEmployee(employeeId);
 		return employee!=null ? ResponseEntity.ok(employee) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		
 	}
 	
 }
