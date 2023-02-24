@@ -1,0 +1,5 @@
+
+
+	App		:		FirstApp
+	Port		:		${server.port}
+	Spring Boot     :		${spring-boot.formatted-version}	
