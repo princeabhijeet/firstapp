@@ -26,4 +26,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 	}
 
+	@Override
+	public Employee saveEmployee(Employee employee) {
+		log.info("Adding a new Employee in databse");
+		Employee savedEmployee = employeeRepository.save(employee);
+		log.info("EmployeeId {} successfully saved in database", savedEmployee.getEmployeeId());
+		return savedEmployee;
+	}
+
 }
