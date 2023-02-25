@@ -2,6 +2,10 @@ pipeline {
 
 	agent any
 	
+	parameters {
+		string name: 'App', description: 'App name', defaultValue: 'firstapp'
+	}
+	
 	tools {
 		maven 'Maven 3.9.0'
 		jdk 'JDK 17'
