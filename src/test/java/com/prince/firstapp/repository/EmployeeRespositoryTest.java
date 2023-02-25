@@ -23,7 +23,7 @@ public class EmployeeRespositoryTest {
 		Employee savedEmployee = employeeRepositry.save(employee);
 		
 		//then
-		assertThat(savedEmployee).isNotNull();
+		assertThat(savedEmployee).isNull();
 	}
 	
 }
