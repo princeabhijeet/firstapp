@@ -8,7 +8,6 @@ pipeline {
 				git branch: 'develop', poll: false, url: 'https://github.com/princeabhijeet/firstapp'
 				echo "Git checkout COMPLETE"
 			}
-			
 		}
 		
 	}
