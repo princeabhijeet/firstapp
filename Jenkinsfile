@@ -3,7 +3,7 @@ pipeline {
 	agent any
 	
 	parameters {
-		string name: 'App', description: 'App name'
+		string name: 'App', description: 'App name', defaultValue: 'firstapp'
 	}
 	
 	tools {
