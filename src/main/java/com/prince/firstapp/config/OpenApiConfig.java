@@ -11,6 +11,8 @@ import io.swagger.v3.oas.models.info.Info;
 @Configuration
 public class OpenApiConfig {
 	
+	//Swagger3 OpenAPI UI : http://localhost:8585/swagger-ui/index.html#/
+	
 	@Value("${spring.application.name}")
 	private String title;
 
