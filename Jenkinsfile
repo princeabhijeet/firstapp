@@ -14,6 +14,7 @@ pipeline {
 	stages {
 		stage("Maven Clean") {
 			steps {
+				echo "App Name: $App"
 				echo "STAGE: Maven clean - START"
 				sh "mvn clean"
 				echo "STAGE: Maven clean - COMPLETE"
