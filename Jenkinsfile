@@ -15,5 +15,12 @@ pipeline {
 				echo "STAGE: Maven clean - COMPLETE"
 			}
 		}
+		stage("Maven Build") {
+			steps {
+				echo "STAGE: Maven Build - START"
+				sh "mvn -Dmaven.test.failure.ignore=false install"
+				echo "STAGE: Maven Build - COMPLETE"
+			}
+		}
 	}
 }
