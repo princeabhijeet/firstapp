@@ -2,11 +2,11 @@ pipeline {
 	agent any
 	stages {
 		
-		stage("Git Checkout") {
+		stage("Maven Clean") {
 			steps {
-				echo "Git checkout START"
-				git branch: 'develop', poll: false, url: 'https://github.com/princeabhijeet/firstapp'
-				echo "Git checkout COMPLETE"
+				echo "STAGE: Maven clean - START"
+				sh "mvn clean"
+				echo "STAGE: Maven clean - COMPLETE"
 			}
 		}
 		
