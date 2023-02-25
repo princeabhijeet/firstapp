@@ -2,9 +2,9 @@ pipeline {
 
 	agent any
 	
-	parameters {
+	/*parameters {
 		string name: 'App', description: 'App name', defaultValue: 'firstapp'
-	}
+	}*/
 	
 	tools {
 		maven 'Maven 3.9.0'
@@ -12,14 +12,15 @@ pipeline {
 	}
 	
 	stages {
+		
 		stage("Maven Clean") {
 			steps {
-				echo "App Name: $App"
 				echo "STAGE: Maven clean - START"
 				sh "mvn clean"
 				echo "STAGE: Maven clean - COMPLETE"
 			}
 		}
+		
 		stage("Maven Build") {
 			steps {
 				echo "STAGE: Maven Build - START"
@@ -27,5 +28,8 @@ pipeline {
 				echo "STAGE: Maven Build - COMPLETE"
 			}
 		}
+		
+		
+		
 	}
 }
